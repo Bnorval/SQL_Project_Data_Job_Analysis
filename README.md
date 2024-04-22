@@ -1,12 +1,11 @@
-About the Project
+# Introduction
+This project was to understand the Data Analyst job market. Specifically looking at what are the top-paying jobs, in-demand skills, and where high demand meets high salary. In addition, I focused mostly on remote roles as that is the sector I am personally focused on being in. Though the datasets used for this analysis could be broken out into non-remote jobs or focus on specific cities or locations.
+# Background
 
-GOAL:
-1. As an aspiring data analyst, I want to analyze the top-paying roles and skills
-2. I will create SQL queries to explore this large dataset - specifically targeting remote jobs as that is my desired type.
+# Tools I Used
 
-Insights we are aiming for:
-1. Top Paying Data Analyst Jobs
-2. Skills for Top-Paying Jobs
-3. Most In-Demand Skills
-4. Skills with Higher Salaries
-5. Optimal Skills for Job Market Value
+# The Analysis
+
+# What I Learned
+
+# Conclusions
