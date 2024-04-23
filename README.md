@@ -59,6 +59,7 @@ LIMIT 10;
 | Principal Data Analyst, AV Performance Analysis | Motional                          | $189,000   |
 | Principal Data Analyst                   | SmartAsset                               | $186,000   |
 | ERM Data Analyst                         | Get It Recruit - Information Technology | $184,000   |
+
 *Table showcasing the results of the top 10 data analyst roles*
 #### Learnings:
 - **Salary Range:** Filtering down to only the top 10, there is a large salary gap from the highest to the lowest paid. The top caps out at $650,000 and the lowest goes all the way down to $184,000 - a nearly $400,000 pay gap. This indicates a significant salary potential in the field.
