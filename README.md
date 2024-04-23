@@ -257,7 +257,7 @@ a niche in their skillset and separate themselves from the rest.
 
 # Conclusion
 From this analysis, several patterns revealed themselves.
-1. The core of the data analyst should be made up of a few skills: Database querying (SQL), data analysis tools (R, Python, Excel), and data visualization (Tableau or Power BI).
-2. Outside of these core skills, an analyst can carve out a niche for themselves by picking up a high paying but lower demanded skills such as GO or Hadoop.
+1. The core of the data analyst should be made up of multiple skills: Database querying (SQL), data analysis tools (R, Python, Excel), and data visualization (Tableau or Power BI).
+2. Outside of these core skills, an analyst can carve out a niche for themselves by picking up a high paying but lower demanded skill such as GO or Hadoop.
 3. The pay range for a data analyst can be quite varied, averaging in $90,000 - $100,000 range but being able to pay up to $650,000.
-4. 
+4. In order to become a very high paid analyst, you must be prepared to be the best in your role or be ready to take on the skills needed to become a director.
