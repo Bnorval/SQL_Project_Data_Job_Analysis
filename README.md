@@ -46,6 +46,8 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
+<br>
+
 #### Results:
 | Title                                    | Company                                  | Salary     |
 |------------------------------------------|------------------------------------------|------------|
@@ -142,6 +144,8 @@ LIMIT 5
 | Power BI  | 2,609         |
 
 *Table showcasing the results of the top 5 skills query.*
+<br>
+
 
 Looking at the results of this query, there is some pattern changes when considering all pay ranges.
 SQL, Excel, Python, and Tableau remain in the top 5. However, Power BI has replaced R as one of the top skills.
@@ -175,6 +179,8 @@ ORDER BY
     average_salary DESC
 LIMIT 10
 ```
+<br>
+
 #### Results:
 
 | Skills         | Average Salary |
@@ -192,6 +198,7 @@ LIMIT 10
 
 *Table showcasing the results of the top 10 highest paid skills.*
 
+<br>
 Based on these results, we can identify a few key points:
 - **Emphasis on Big Data Handling:** Big database tools such as PySpark & Databricks showcases a demand
 for tools that can manage large amounts of a variety of data.
@@ -207,7 +214,7 @@ like TensorFlow show the importance of newer technologies and AI solutions in th
 Utilizing all the knowledge we gained from the past queries, we need to pinpoint the most optimal skills.
 We will be defining optimal skills as those that are both high in demand and high in average salary.
 
-To best showcase this, I am going to take the results of my query and create a visualization in Excel. The data points will be ranked against each other based on demand and based on salary. Combining the ranks together, the lowest total rank skills will be the most optimal. (i.e. A skill ranked 1st in demand and 2nd in salary has a total rank of 3.)
+To best showcase this, I am going to take the results of my query, rankd the data, and visualize it in Excel. First, let's make our SQL query to get the data we need.
 
 ```sql
 SELECT 
@@ -231,6 +238,40 @@ ORDER BY
     average_salary DESC
 LIMIT 25;
 ```
+<br>
+Now that we have our results, lets rank the data - 1st through 25th - for both demand and salary. We can use that to get to our Total Rank. This will be one method of determining our optimal skills.
+
+| Skills     | Demand Rank | Salary Rank | Total Rank |
+|------------|-------------|-------------|------------|
+| python     | 3           | 10          | 13         |
+| snowflake  | 11          | 3           | 14         |
+| tableau    | 4           | 12          | 16         |
+| r          | 5           | 11          | 16         |
+| sql        | 1           | 17          | 18         |
+| looker     | 9           | 9           | 18         |
+| azure      | 14          | 4           | 18         |
+| oracle     | 11          | 8           | 19         |
+| go         | 18          | 1           | 19         |
+| sas        | 7           | 13          | 20         |
+| aws        | 15          | 5           | 20         |
+| power bi   | 6           | 16          | 22         |
+| hadoop     | 21          | 2           | 23         |
+| excel      | 2           | 22          | 24         |
+| sql server | 13          | 14          | 27         |
+| powerpoint | 8           | 21          | 29         |
+| jira       | 22          | 7           | 29         |
+| java       | 25          | 6           | 31         |
+| word       | 10          | 24          | 34         |
+| flow       | 17          | 18          | 35         |
+| javascript | 22          | 15          | 37         |
+| sheets     | 15          | 23          | 38         |
+| spss       | 19          | 19          | 38         |
+| vba        | 19          | 20          | 39         |
+| sharepoint | 24          | 25          | 49         |
+
+<br>
+
+Now that we have our organized table and optimal skills by Total Rank, let's visualize it into a stacked bar chart to get easier insights.
 
 ![Most_Optimal_Skills](project_sql/assets/Most_Optimal_Skills.png)
 
@@ -255,9 +296,15 @@ skills are going to pay similarly to each other outside of the very top and bott
 only sought after by a smaller portion of companies. However, this could allow an analyst to carve
 a niche in their skillset and separate themselves from the rest.
 
+With the optimal skills being the most important part of my analysis, I want to do one more visualization. The ranked data is a great way to get a concise list of the best potentail skills, however it does not do a great job showasing the gap between the highest and lowest demand or salary. Lets place this data onto a scatter plot and see how it looks.
+
+![Salary_Demand_Scatter](project_sql/assets/Salary_vs_Demand_Scatter.png)
+
+With the scatter plot, it really showcases how much higher the demand is for skills like SQL, Excel, and Python. It also highlights that no skill truly has both a high demand and a high salary - some sacrifice is going to be made. This is a great resource for an analyst to figure what balance of demand and salary they are looking for in their next skill to hone.
+
 # Conclusion
 From this analysis, several patterns revealed themselves.
 1. The core of the data analyst should be made up of multiple skills: Database querying (SQL), data analysis tools (R, Python, Excel), and data visualization (Tableau or Power BI).
 2. Outside of these core skills, an analyst can carve out a niche for themselves by picking up a high paying but lower demanded skill such as GO or Hadoop.
-3. The pay range for a data analyst can be quite varied, averaging in $90,000 - $100,000 range but being able to pay up to $650,000.
+3. The pay range for a data analyst can be quite varied, averaging in $90,000 - $110,000 range but being able to pay up to $650,000.
 4. In order to become a very high paid analyst, you must be prepared to be the best in your role or be ready to take on the skills needed to become a director.
