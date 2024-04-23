@@ -17,8 +17,8 @@ The data is provided by [Luke Barousse's SQL for Data Analytics Course](https://
 # Tools
 For my insights on the data analyst job market, I utilized multiple key tools:
 - **SQL**: The main basis of my analysis utilized SQL to query from the database and highlight key information to answer my questions.
-- **PostgreSQL**: The chosen database management system. It is reliable, open source, and quick to learn.
-- **Visual Studio Code**: My bread and butter for executing and managing SQL queries.
+- **PostgreSQL**: The chosen database management system.
+- **Visual Studio Code**: My bread and butter for writing and executing SQL queries.
 - **Git & GitHub**: Essential for documentation and ease of sharing for both my analysis and the queries that went into them.
 # The Analysis
 Each query for this project aimed at gaining insight on specific aspects of the data analyst job market. This is how I took on each question.
