@@ -145,13 +145,13 @@ LIMIT 5
 Looking at the results of this query, there is some pattern changes when considering all pay ranges.
 SQL, Excel, Python, and Tableau remain in the top 5. However, Power BI has replaced R as one of the top skills.
 Excel also has taken 2nd place, surpassing Python in this ranking. R is also now missing from the top 5.
-This showcases that while R is not as in demand, it can lead to a higher paid job. The main takeaway is that there is a need for a split set of skills:
+This showcases that while R is not as in demand, it can lead to a higher paying job. The key takeaway is that there is a need for a split set of skills:
 - SQL for database management
 - Excel for data analysis
 - Python for statistical analyses.
 - Tableau or Power BI as a data visualization tool.
 
-Based on the data, this list makes up the core of a data analyst. It will be key to have all these skills
+Based on the data, this list makes up the core of a data analyst. It will be important to have all these skills
 for an analysts career.
 
 ### 4. Skills Based on Salary
@@ -232,9 +232,9 @@ ORDER BY
 LIMIT 25;
 ```
 
-![Most_Optimal_Skills](project_sql\assets\Most_Optimal_Skills.png)
+![Most_Optimal_Skills](project_sql/assets/Most_Optimal_Skills.png)
 
-*This visualization is a stacked bar graph breaking down the demand ranks and salary ranks among the top 25. The lowest total ranked skills are the most optimal skills.*
+*This visualization is a stacked bar graph breaking down the demand ranks and salary ranks among the top 25 skills. The lowest total ranked skills are the most optimal skills.*
 
 After analyzing the results of this query in Excel, there is no clear winner in the most optimal skills.
 However I am able to identify some helpful insights and a list of skills that generally meet our criteria.
