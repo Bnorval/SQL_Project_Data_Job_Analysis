@@ -108,7 +108,7 @@ This showcases a clear set of skills to focus on:
 - Python for additional querying and statistical analyses
 - Tableau for visualizng this data
 
-![Top Paying Skills](project_sql\assets\Top_Paying_Skills.png)
+![Top Paying Skills](project_sql/assets/Top_Paying_Skills.png)
 
 *Bar graph visualizing the count of skills for the top 10 paying jobs for Data Analysts. This was narrowed down to at least 3 job postings per skill for visual clarity.*
 
