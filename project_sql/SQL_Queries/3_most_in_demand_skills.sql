@@ -32,7 +32,7 @@ This showcases that while R is not as in demand, it can lead to a higher paid jo
 need for a split set of skills similar to query 2.
     - Know SQL for database management
     - Know Excel for data analysis
-    - Know Pything for statistical implementations and analysis.
+    - Know Python for statistical analyses.
     - Know a data visualization tool.
 
 Based on the data, this makes up the core of a data analyst, and it will be key to have all these skills

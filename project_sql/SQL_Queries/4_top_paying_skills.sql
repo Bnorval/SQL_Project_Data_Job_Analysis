@@ -20,7 +20,7 @@ GROUP BY
     sk.skills
 ORDER BY
     average_salary DESC
-LIMIT 25
+LIMIT 10
 
 /*
 Based on these results, we can identify a few key points:
