@@ -246,7 +246,7 @@ due to the sheer demand and likelihood that you are going to use these skills in
 - **Snowflake:** This skill stands out as one of the clear winners in this list. It is among the highest top paid skills, and it also had a good demand rank. Learning snowflake could lead to a great job for the analyst career path.
 
 - **The Salary Winners | Demand Winners:** *Python, Tableau, and R* - These skills have a very
-high demand while also having a respectable level of pay. It also highlights an interesting data point - the salaries on average are very close to each other. Tableau at 11th place in Salary
+high demand while also having a respectable level of pay. It also highlights an interesting data point - the salaries on average are very close to each other. Tableau at 11th place in salary
 had an average salary of $99,288. While SQL at 17th place in salary had an average of $97,237.
 There is only a $2,000 difference in salary but was ranked 6 places apart, showing that many of these
 skills are going to pay similarly to each other outside of the very top and bottom.
