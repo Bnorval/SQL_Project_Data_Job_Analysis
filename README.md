@@ -208,7 +208,7 @@ like TensorFlow show the importance of newer technologies and AI solutions in th
 Utilizing all the knowledge we gained from the past queries, we need to pinpoint the most optimal skills.
 We will be defining optimal skills as those that are both high in demand and high in average salary.
 
-To best showcase this, I am going to take the results of my query and create a visualization in Excel. The data points will be ranked against each other based on demand and based on salary. Combining the ranks together, the lowest total rank skills will be the most optimal.
+To best showcase this, I am going to take the results of my query and create a visualization in Excel. The data points will be ranked against each other based on demand and based on salary. Combining the ranks together, the lowest total rank skills will be the most optimal. (i.e. A skill ranked 1st in demand and 2nd in salary has a total rank of 3.)
 
 ```sql
 SELECT 
