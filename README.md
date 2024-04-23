@@ -243,7 +243,7 @@ However I am able to identify some helpful insights and a list of skills that ge
 of the lowest paying jobs on average, with SQL being 17th out of 25, and Excel being 22nd. However,
 due to the sheer demand and likelihood that you are going to use these skills in any kind of job, I still find them necessary to learn.
 
-- **Snowflake:** This skill stands out as one of the clear winners in this list. It is among the highest top paid skills on average, and it also had a good demand rank. Learning snowflake could lead to a great job for the analyst career path.
+- **Snowflake:** This skill stands out as one of the clear winners in this list. It is among the highest top paid skills, and it also had a good demand rank. Learning snowflake could lead to a great job for the analyst career path.
 
 - **The Salary Winners | Demand Winners:** *Python, Tableau, and R* - These skills have a very
 high demand while also having a respectable level of pay. It also highlights an interesting data point - the salaries on average are very close to each other. Tableau at 11th place in Salary
