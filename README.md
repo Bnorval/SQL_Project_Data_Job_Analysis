@@ -176,7 +176,6 @@ ORDER BY
 LIMIT 10
 ```
 #### Results:
-Sure! Here's the SQL query results converted into a Markdown table formatted for GitHub:
 
 | Skills         | Average Salary |
 |----------------|----------------|
