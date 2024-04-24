@@ -1,7 +1,7 @@
 # Introduction
 The goal of this project is to understand the Data Analyst job market. Specifically, looking at what are the top-paying jobs, in-demand skills, and where high demand meets high salary. In addition, I focused mostly on remote roles as that is the sector I am invested in.
 
-Interested in the queries themselves? You can find them here: [SQL Qeueries Project Folder](https://github.com/Bnorval/SQL_Project_Data_Job_Analysis/tree/main/project_sql/SQL_Queries)
+Interested in the queries themselves? You can find them here: [SQL Queries Project Folder](https://github.com/Bnorval/SQL_Project_Data_Job_Analysis/tree/main/project_sql/SQL_Queries)
 # Background
 With a strong desire to learn more about the data analyst industry and job market, this project was made to streamline what skills are valuable. This is broken down into top-paid skills, in-demand skills, and both if applicable. This allows me and other users to streamline the learning process and narrow the scope for advancing in their career.
 
@@ -22,10 +22,10 @@ For my insights on the data analyst job market, I utilized multiple key tools:
 - **Excel**: Creating visualizations to showcase my insights.
 - **Git & GitHub**: Essential for documentation and ease of sharing for both my analysis and the queries that went into them.
 # The Analysis
-Each query for this project aimed at gaining insight on specific aspects of the data analyst job market. This is how I took on each question.
+Each query for this project is aimed at gaining insight on specific aspects of the data analyst job market. This is how I took on each question.
 
 ### 1. Top Paying Data Analyst Jobs
-To identify the highest paying roles, I filtered down based on average salary. It is also filtered to remote jobs since that is my area of interest. This will narrow it down to the top 10 jobs utilizng the LIMIT option.
+To identify the highest paying roles, I filtered down based on average salary. It is also filtered to remote jobs since that is my area of interest. This will narrow it down to the top 10 jobs utilizing the LIMIT option.
 
 ```sql
 SELECT 
@@ -66,7 +66,7 @@ LIMIT 10;
 *Table showcasing the results of the top 10 data analyst roles*
 #### Learnings:
 - **Salary Range:** Filtering down to only the top 10, there is a large salary gap from the highest to the lowest paid. The top caps out at $650,000 and the lowest goes all the way down to $184,000 - a $466,000 pay gap. This indicates a significant salary potential in the field.
-- **Job Titles:** There is a couple different job titles among the top paying roles. Based on the data, you will either need to be a head analyst on the team, or become a director of the team to acquire a high salary.
+- **Job Titles:** There are a couple different job titles among the top paying roles. Based on the data, you will either need to be a head analyst on the team or become a director of the team to acquire a high salary.
 - **Employers:** The employers for these roles are mostly made up of tech companies, showing that they are the leaders of this industry. Also among the employers is two healthcare companies indicating another strong option for data analyst roles.
 
 ### 2. Skills for Top Paying Jobs
@@ -102,22 +102,22 @@ ORDER BY
     salary_year_avg DESC
 ```
 
-After breaking down and analysing the results, a few key skills stand out. SQL had the highest freuquency
+After breaking down and analyzing the results, a few key skills stand out. SQL had the highest frequency
 being required in 80% of the job postings. Python came in 2nd with 70% of the job postings, and Tableau
 came in 3rd with 60% of the job postings. Other skills such as R and Excel also have a good number of 
-listings, however the top three skills are clearly dominant over the rest.
+listings, however, the top three skills are clearly dominant over the rest.
 
 This showcases a clear set of skills to focus on:
 - SQL for database knowledge and querying
 - Python or R for additional querying and statistical analyses
-- Tableau for visualizng this data
+- Tableau for visualizing this data
 
 ![Top Paying Skills](project_sql/assets/Top_Paying_Skills.png)
 
 *Bar graph visualizing the count of skills for the top 10 paying jobs for Data Analysts. This was narrowed down to at least three job postings per skill for visual clarity.*
 
 ### 3. In-Demand Skills for Data Analysts
-This query helped identify the top skills being asked for remote data analysts. This time, its across all job postings to get a better understanding of the industry as a whole.
+This query helped identify the top skills required for remote data analysts. This time, it is across all job postings to get a better understanding of the industry as a whole.
 
 ```sql
 SELECT
@@ -148,10 +148,10 @@ LIMIT 5
 <br>
 
 
-Looking at the results of this query, there is some pattern changes when considering all pay ranges.
+Looking at the results of this query, there are some pattern changes when considering all pay ranges.
 SQL, Excel, Python, and Tableau remain in the top 5. However, Power BI has replaced R as one of the top skills.
 Excel also has taken 2nd place, surpassing Python in this ranking. R is also now missing from the top 5.
-This showcases that while R is not as in demand, it can lead to a higher paying job. The key takeaway is that there is a need for a split set of skills which is reinforiced by the previous query:
+This showcases that while R is not as in demand, it can lead to a higher paying job. The key takeaway is that there is a need for a split set of skills which is reinforced by the previous query:
 - SQL for database management.
 - Excel for data analysis and visualizations.
 - Python for statistical analyses.
@@ -204,22 +204,22 @@ Based on these results, we can identify a few key points:
 - **Emphasis on Big Data Handling:** Big database tools such as PySpark & Databricks showcases a demand
 for tools that can manage large amounts of a variety of data.
 
-- **Integration of Software Developement:** Many collaborative tools are found here such as Jenkins and
+- **Integration of Software Development:** Many collaborative tools are found here such as Jenkins and
 Gitlab. These tools are found in a variety of industries such as software or website
 development. Being able to analyze data and collaborate with others is a big selling point.
 
-- **Cloud computing and Machine Learning:** Cloud Platforms such as Kubernetes and machine larning libraries
+- **Cloud computing and Machine Learning:** Cloud Platforms such as Kubernetes and machine learning libraries
 like TensorFlow show the importance of newer technologies and AI solutions in the workforce.
 
 ### 5. Most Optimal Skills to Learn
 Utilizing all the knowledge we gained from the past queries, we need to pinpoint the most optimal skills.
 We will be defining optimal skills as those that are both high in demand and high in salary.
 
-This can be qeuried two different ways:
+This can be queried two different ways:
 - Prioritizing salary and then demand.
 - Prioritizing demand and then salary.
 
-An analyst may have favor salary or demand differently depending on where they are in their career, so let's analyze both methods. First we wil do salary prioritized.
+An analyst may have favor salary or demand differently depending on where they are in their career, so let's analyze both methods. First, we will do salary prioritized.
 
 Salary Prioritized
 -
@@ -338,16 +338,16 @@ There are some notable highlights compared to the last scatter plot. Let's go ov
 
 Bringing it All Together
 -
-Based on this analysis, there is no truly optimal skill. As jobs seek higher demand, the average salary for them trends downard. This trends sharply as you get to the truly high demanded jobs. With this knowledge, an analyst will have to understand what they want to prioritize when learning something new. Do they want to target a skill that will get them a higher salary, or do they want one that will land them a job easier?
+Based on this analysis, there is no truly optimal skill. As jobs seek higher demand, the average salary for them trends downward. This trends sharply as you get to the truly high demanded jobs. With this knowledge, an analyst will have to understand what they want to prioritize when learning something new. Do they want to target a skill that will get them a higher salary, or do they want one that will land them a job easier?
 
 
 # Conclusion
 From this analysis, several patterns revealed themselves.
 1. The core of the data analyst should be made up of multiple skills: Database querying (SQL), data analysis tools (R, Python, Excel), and data visualization (Tableau or Power BI).
 2. Outside of these core skills, an analyst can carve out a niche for themselves by picking up a high paying but lower demanded skill such as GO or Hadoop.
-3. The pay range for a data analyst can be quite varied, averaging in $90,000 - $110,000 range but being able to pay up to $650,000.
+3. The pay range for a data analyst can be quite varied, averaging in the $90,000 - $110,000 range but being able to pay up to $650,000.
 4. In order to become a very high paid analyst, you must be prepared to be the best in your role or be ready to take on the skills needed to become a director.
 
 Closing Thoughts
 -
-This analysis has been a great resource for myself as a job seeker, and many other data analysts out there whether they be entering the industry or trying to upgrade their skillset. We only have so much time in our day to dedicate to learning new things, so streamlining the process and being able to target exactly what we want is very helpful. This exmploration showcases the importance of constant learning and paying attention to trends in the job market.
+This analysis has been a great resource for myself as a job seeker, and many other data analysts out there whether they be entering the industry or trying to upgrade their skillset. We only have so much time in our day to dedicate to learning new things, so streamlining the process and being able to target exactly what we want is very helpful. This exploration showcases the importance of constant learning and paying attention to trends in the job market.
