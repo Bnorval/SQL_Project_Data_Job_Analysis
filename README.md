@@ -204,7 +204,7 @@ Based on these results, we can identify a few key points:
 for tools that can manage large amounts of a variety of data.
 
 - **Integration of Software Developement:** Many collaborative tools are found here such as Jenkins and
-Gitlab. These tools are found in a variety of industries such as software development or website
+Gitlab. These tools are found in a variety of industries such as software or website
 development. Being able to analyze data and collaborate with others is a big selling point.
 
 - **Cloud computing and Machine Learning:** Cloud Platforms such as Kubernetes and machine larning libraries
@@ -212,9 +212,9 @@ like TensorFlow show the importance of newer technologies and AI solutions in th
 
 ### 5. Most Optimal Skills to Learn
 Utilizing all the knowledge we gained from the past queries, we need to pinpoint the most optimal skills.
-We will be defining optimal skills as those that are both high in demand and high in average salary.
+We will be defining optimal skills as those that are both high in demand and high in salary.
 
-To best showcase this, I am going to take the results of my query, rankd the data, and visualize it in Excel. First, let's make our SQL query to get the data we need.
+To best showcase this, I am going to take the results of my query, rank the data, and visualize it in Excel. First, let's make our SQL query to get the data we need.
 
 ```sql
 SELECT 
@@ -271,20 +271,19 @@ Now that we have our results, lets rank the data - 1st through 25th - for both d
 
 <br>
 
-Now that we have our organized table and optimal skills by Total Rank, let's visualize it into a stacked bar chart to get easier insights.
+Now that we have our organized table and optimal skills by Total Rank, let's visualize it into a stacked bar chart to get insights.
 
 ![Most_Optimal_Skills](project_sql/assets/Most_Optimal_Skills.png)
 
 *This visualization is a stacked bar graph breaking down the demand ranks and salary ranks among the top 25 skills. The lowest total ranked skills are the most optimal skills.*
 
-After analyzing the results of this query in Excel, there is no clear winner in the most optimal skills.
-However I am able to identify some helpful insights and a list of skills that generally meet our criteria.
+After analyzing the results of this query in Excel, Python and Snowflake lead the pack in the most optimal skills. Let's breakdown all the details from the graph:
 
 - **SQL & Excel:** These two skills were by far the highest demanded skills. However they were also some
 of the lowest paying jobs on average, with SQL being 17th out of 25, and Excel being 22nd. However,
 due to the sheer demand and likelihood that you are going to use these skills in any kind of job, I still find them necessary to learn.
 
-- **Snowflake:** This skill stands out as one of the clear winners in this list. It is among the highest top paid skills, and it also had a good demand rank. Learning snowflake could lead to a great job for the analyst career path.
+- **Snowflake:** This skill stands out as one of the clear winners in this list. It is among the highest top paid skills, and it also had a good demand rank. Learning snowflake could lead to a great job for an analyst's career path.
 
 - **The Salary Winners | Demand Winners:** *Python, Tableau, and R* - These skills have a very
 high demand while also having a respectable level of pay. It also highlights an interesting data point - the salaries on average are very close to each other. Tableau at 11th place in salary
@@ -296,7 +295,7 @@ skills are going to pay similarly to each other outside of the very top and bott
 only sought after by a smaller portion of companies. However, this could allow an analyst to carve
 a niche in their skillset and separate themselves from the rest.
 
-With the optimal skills being the most important part of my analysis, I want to do one more visualization. The ranked data is a great way to get a concise list of the best potentail skills, however it does not do a great job showasing the gap between the highest and lowest demand or salary. Lets place this data onto a scatter plot and see how it looks.
+With the optimal skills being the most important part of my analysis, I want to do one more visualization. The ranked data is a great way to get a concise list of the best potentail skills, however it does not do a great job showasing the gap between the highest and lowest demand or salary. Let's place this data onto a scatter plot and see how it looks.
 
 ![Salary_Demand_Scatter](project_sql/assets/Salary_vs_Demand_Scatter.png)
 
