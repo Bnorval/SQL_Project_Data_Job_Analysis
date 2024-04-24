@@ -160,7 +160,7 @@ Based on the data, this list makes up the core of a data analyst. It will be imp
 for an analysts career.
 
 ### 4. Skills Based on Salary
-With this query, we are going to find out what is the average salary assocaited with each skill to see how it effects our list.
+With this query, we are going to find out what is the average salary associated with each skill to see how it effects our list.
 
 ```sql
 SELECT
