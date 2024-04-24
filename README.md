@@ -214,7 +214,14 @@ like TensorFlow show the importance of newer technologies and AI solutions in th
 Utilizing all the knowledge we gained from the past queries, we need to pinpoint the most optimal skills.
 We will be defining optimal skills as those that are both high in demand and high in salary.
 
-To best showcase this, I am going to take the results of my query, rank the data, and visualize it in Excel. First, let's make our SQL query to get the data we need.
+This can be qeuried two different ways:
+- Prioritizing salary and then demand.
+- Prioritizing demand and then salary.
+
+An analyst may have favor salary or demand differently depending on where they are in their career, so let's analyze both methods. First we wil do salary prioritized.
+
+Salary Prioritized
+-
 
 ```sql
 SELECT 
@@ -229,77 +236,109 @@ WHERE
     job_title_short = 'Data Analyst'
     AND salary_year_avg IS NOT NULL
     and job_location = 'Anywhere'
-GROUP BY
+ GROUP BY
+    sk.skill_id
+HAVING
+    COUNT(sj.job_id) > 10
+ORDER BY
+    average_salary DESC,
+    demand_count DESC
+LIMIT 15;
+```
+
+
+| Skills    | Demand Count | Average Salary |
+|-----------|--------------|----------------|
+| Go        | 27           | $115,320       |
+| Confluence| 11           | $114,210       |
+| Hadoop    | 22           | $113,193       |
+| Snowflake | 37           | $112,948       |
+| Azure     | 34           | $111,225       |
+| Bigquery  | 13           | $109,654       |
+| AWS       | 32           | $108,317       |
+| Java      | 17           | $106,906       |
+| SSIS      | 12           | $106,683       |
+| Jira      | 20           | $104,918       |
+| Oracle    | 37           | $104,534       |
+| Looker    | 49           | $103,795       |
+| NoSQL     | 13           | $101,414       |
+| Python    | 236          | $101,397       |
+| R         | 148          | $100,499       |
+
+With our query on hand, let's plot this data onto a scatter graph to see what trends we can find.
+
+![Most_Optimal_Skills](project_sql/assets/Salary_vs_Demand_Salary_Prioritized.png)
+
+*A visualization plotting the salary and demand of the top 15 jobs with salary prioritized.*
+<br>
+<br>
+
+
+
+- **SQL & Excel:** These two skills were by far the highest demanded skills. However, they were unable to make it into the top 15 highest salary skills. A seasoned analyst focusing on a higher salary will have likely already developed these skills or are moving onto more specialized ones.
+
+- **The Top Salaries:** The top paying skills do not have much variance in demand. Nothing makes it over 50 job postings reinforcing that these are niche but can be a big payoff if an analyst learns them. Snowflake, Azure, and GO will be the best skills to develop if aiming for over $110,000.
+- **The Top Demand:** Python and R greatly outperform these high paying skills in demand, being well ahead of the curve. The only downside is that these are the two lowest paying salaries in the top 15. But if you're happy making just over $100,000 on average, these are great skills to develop.
+<br>
+
+Demand Prioritized
+- 
+```sql
+SELECT 
+    sk.skill_id,
+    sk.skills,
+    COUNT(sj.job_id) AS demand_count,
+    ROUND(AVG(j.salary_year_avg), 0) AS average_salary
+FROM job_postings_fact j
+INNER JOIN skills_job_dim sj ON j.job_id = sj.job_id
+INNER JOIN skills_dim sk ON sj.skill_id = sk.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+    AND salary_year_avg IS NOT NULL
+    and job_location = 'Anywhere'
+ GROUP BY
     sk.skill_id
 HAVING
     COUNT(sj.job_id) > 10
 ORDER BY
     demand_count DESC,
     average_salary DESC
-LIMIT 25;
+LIMIT 15;
 ```
+| Skills      | Demand Count | Average Salary |
+|-------------|--------------|----------------|
+| SQL         | 398          | $97,237        |
+| Excel       | 256          | $87,288        |
+| Python      | 236          | $101,397       |
+| Tableau     | 230          | $99,288        |
+| R           | 148          | $100,499       |
+| Power Bi    | 110          | $97,431        |
+| SAS         | 63           | $98,902        |
+| Powerpoint  | 58           | $88,701        |
+| Looker      | 49           | $103,795       |
+| Word        | 48           | $82,576        |
+| Snowflake   | 37           | $112,948       |
+| Oracle      | 37           | $104,534       |
+| SQL Server  | 35           | $97,786        |
+| Azure       | 34           | $111,225       |
+| AWS         | 32           | $108,317       |
+
+
+![Salary_Demand_Scatter](project_sql/assets/Salary_vs_Demand_Demand_Prioritized.png)
+*A visualization plotting the salary and demand of the top 15 jobs with demand prioritized.*
 <br>
-Now that we have our results, lets rank the data - 1st through 25th - for both demand and salary. We can use that to get to our Total Rank. This will be one method of determining our optimal skills.
-
-| Skills     | Demand Rank | Salary Rank | Total Rank |
-|------------|-------------|-------------|------------|
-| python     | 3           | 10          | 13         |
-| snowflake  | 11          | 3           | 14         |
-| tableau    | 4           | 12          | 16         |
-| r          | 5           | 11          | 16         |
-| sql        | 1           | 17          | 18         |
-| looker     | 9           | 9           | 18         |
-| azure      | 14          | 4           | 18         |
-| oracle     | 11          | 8           | 19         |
-| go         | 18          | 1           | 19         |
-| sas        | 7           | 13          | 20         |
-| aws        | 15          | 5           | 20         |
-| power bi   | 6           | 16          | 22         |
-| hadoop     | 21          | 2           | 23         |
-| excel      | 2           | 22          | 24         |
-| sql server | 13          | 14          | 27         |
-| powerpoint | 8           | 21          | 29         |
-| jira       | 22          | 7           | 29         |
-| java       | 25          | 6           | 31         |
-| word       | 10          | 24          | 34         |
-| flow       | 17          | 18          | 35         |
-| javascript | 22          | 15          | 37         |
-| sheets     | 15          | 23          | 38         |
-| spss       | 19          | 19          | 38         |
-| vba        | 19          | 20          | 39         |
-| sharepoint | 24          | 25          | 49         |
-
 <br>
 
-Now that we have our organized table and optimal skills by Total Rank, let's visualize it into a stacked bar chart to get insights.
+There are some notable highlights compared to the last scatter plot. Let's go over them!
+- The highly demanded roles are extremely far ahead of the high salaried roles. SQL is over 8x more demanded than the high salaried jobs.
+- When it comes to the high demanded jobs, it can be difficult to break the barrier of making over $100,000. The salary for these skills such as R, Python, SQL, and Tableau cap out at $101,000 on average.
+- There are some repeat skills that make both the top 15 demanded skills and top 15 highest salary skills. Notably Snowflake, Python, R, Azure, Oracle, and Looker. Those looking for a balance in demand and salary can target these skills to develop.
+- An analyst utilizing this scatter plot trying to land their first job can quickly identify that SQL, Python, Tableau, and Excel can be a great starting point to enter the industry.
 
-![Most_Optimal_Skills](project_sql/assets/Most_Optimal_Skills.png)
+Bringing it All Together
+-
+Based on this analysis, there is no truly optimal skill. As jobs seek higher demand, the average salary for them trends downard. This trends sharply as you get to the truly high demanded jobs. With this knowledge, an analyst will have to understand what they want to prioritize when learning something new. Do they want to target a skill that will get them a higher salary, or do they want one that will land them a job easier?
 
-*This visualization is a stacked bar graph breaking down the demand ranks and salary ranks among the top 25 skills. The lowest total ranked skills are the most optimal skills.*
-
-After analyzing the results of this query in Excel, Python and Snowflake lead the pack in the most optimal skills. Let's breakdown all the details from the graph:
-
-- **SQL & Excel:** These two skills were by far the highest demanded skills. However they were also some
-of the lowest paying jobs on average, with SQL being 17th out of 25, and Excel being 22nd. However,
-due to the sheer demand and likelihood that you are going to use these skills in any kind of job, I still find them necessary to learn.
-
-- **Snowflake:** This skill stands out as one of the clear winners in this list. It is among the highest top paid skills, and it also had a good demand rank. Learning snowflake could lead to a great job for an analyst's career path.
-
-- **The Salary Winners | Demand Winners:** *Python, Tableau, and R* - These skills have a very
-high demand while also having a respectable level of pay. It also highlights an interesting data point - the salaries on average are very close to each other. Tableau at 11th place in salary
-had an average salary of $99,288. While SQL at 17th place in salary had an average of $97,237.
-There is only a $2,000 difference in salary but was ranked 6 places apart, showing that many of these
-skills are going to pay similarly to each other outside of the very top and bottom.
-
-- **The Salary Winners | Demand Losers:** *GO, Hadoop, and JIRA* - These skills were some of the highest paying jobs out there, but the demand is not quite there. This leads these skills to be specialized and 
-only sought after by a smaller portion of companies. However, this could allow an analyst to carve
-a niche in their skillset and separate themselves from the rest.
-
-With the optimal skills being the most important part of my analysis, I want to do one more visualization. The ranked data is a great way to get a concise list of the best potentail skills, however it does not do a great job showasing the gap between the highest and lowest demand or salary. Let's place this data onto a scatter plot and see how it looks.
-
-![Salary_Demand_Scatter](project_sql/assets/Salary_vs_Demand_Scatter.png)
-
-With the scatter plot, it really showcases how much higher the demand is for skills like SQL, Excel, and Python. It also highlights that no skill truly has both a high demand and a high salary - some sacrifice is going to be made. This is a great resource for an analyst to figure what balance of demand and salary they are looking for in their next skill to hone.
 
 # Conclusion
 From this analysis, several patterns revealed themselves.
@@ -307,3 +346,7 @@ From this analysis, several patterns revealed themselves.
 2. Outside of these core skills, an analyst can carve out a niche for themselves by picking up a high paying but lower demanded skill such as GO or Hadoop.
 3. The pay range for a data analyst can be quite varied, averaging in $90,000 - $110,000 range but being able to pay up to $650,000.
 4. In order to become a very high paid analyst, you must be prepared to be the best in your role or be ready to take on the skills needed to become a director.
+
+Closing Thoughts
+-
+This analysis has been a great resource for myself as a job seeker, and many other data analysts out there whether they be entering the industry or trying to upgrade their skillset. We only have so much time in our day to dedicate to learning new things, so streamlining the process and being able to target exactly what we want is very helpful. This exmploration showcases the importance of constant learning and paying attention to trends in the job market.

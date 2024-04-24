@@ -56,6 +56,7 @@ ORDER BY
 LIMIT 25;
 
 
+/*Top 15 Skills sorted by Demand, then Salary*/
 SELECT 
     sk.skill_id,
     sk.skills,
@@ -76,7 +77,30 @@ HAVING
 ORDER BY
     demand_count DESC,
     average_salary DESC
-LIMIT 25;
+LIMIT 15;
+
+/*Top 15 Skills sorted by Salary, then Demand*/
+SELECT 
+    sk.skill_id,
+    sk.skills,
+    COUNT(sj.job_id) AS demand_count,
+    ROUND(AVG(j.salary_year_avg), 0) AS average_salary
+FROM job_postings_fact j
+INNER JOIN skills_job_dim sj ON j.job_id = sj.job_id
+INNER JOIN skills_dim sk ON sj.skill_id = sk.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+    AND salary_year_avg IS NOT NULL
+    and job_location = 'Anywhere'
+    and sk.skill_id <> 7
+GROUP BY
+    sk.skill_id
+HAVING
+    COUNT(sj.job_id) > 10
+ORDER BY
+    average_salary DESC,
+    demand_count DESC
+LIMIT 15;
 
 
 /*
