@@ -3,7 +3,7 @@ The goal of this project is to understand the Data Analyst job market. Specifica
 
 Interested in the queries themselves? You can find them here: [SQL Qeueries Project Folder](https://github.com/Bnorval/SQL_Project_Data_Job_Analysis/tree/main/project_sql/SQL_Queries)
 # Background
-With a strong desire to learn more about the data analyst industry and job market, this project was made to streamline what skills are valuable. This is broken down into top-paid skills, in-demand skills, and both if applicable. This allows me and other users to streamline the learning process and narrow the scope for advancing in their Data Analyst career.
+With a strong desire to learn more about the data analyst industry and job market, this project was made to streamline what skills are valuable. This is broken down into top-paid skills, in-demand skills, and both if applicable. This allows me and other users to streamline the learning process and narrow the scope for advancing in their career.
 
 The data is provided by [Luke Barousse's SQL for Data Analytics Course](https://www.lukebarousse.com/sql). Luke is a talented Data Analyst who has put together a tool to gather data centered around a multitude of data based jobs. The CSV data files used for this analysis can be found on his website.
 
@@ -19,6 +19,7 @@ For my insights on the data analyst job market, I utilized multiple key tools:
 - **SQL**: The main basis of my analysis utilized SQL to query from the database and highlight key information to answer my questions.
 - **PostgreSQL**: The chosen database management system.
 - **Visual Studio Code**: My bread and butter for writing and executing SQL queries.
+- **Excel**: Creating visualizations to showcase my insights.
 - **Git & GitHub**: Essential for documentation and ease of sharing for both my analysis and the queries that went into them.
 # The Analysis
 Each query for this project aimed at gaining insight on specific aspects of the data analyst job market. This is how I took on each question.
@@ -64,12 +65,12 @@ LIMIT 10;
 
 *Table showcasing the results of the top 10 data analyst roles*
 #### Learnings:
-- **Salary Range:** Filtering down to only the top 10, there is a large salary gap from the highest to the lowest paid. The top caps out at $650,000 and the lowest goes all the way down to $184,000 - a nearly $400,000 pay gap. This indicates a significant salary potential in the field.
+- **Salary Range:** Filtering down to only the top 10, there is a large salary gap from the highest to the lowest paid. The top caps out at $650,000 and the lowest goes all the way down to $184,000 - a $466,000 pay gap. This indicates a significant salary potential in the field.
 - **Job Titles:** There is a couple different job titles among the top paying roles. Based on the data, you will either need to be a head analyst on the team, or become a director of the team to acquire a high salary.
 - **Employers:** The employers for these roles are mostly made up of tech companies, showing that they are the leaders of this industry. Also among the employers is two healthcare companies indicating another strong option for data analyst roles.
 
 ### 2. Skills for Top Paying Jobs
-Now that we have identified what are the top paying roles, we need to break it down what skills are being required for these roles. To do this, I joined the job postings with the skill data which provides the valuable insights we need.
+Now that we have identified what are the top paying roles, we need to break it down what skills are being required for these roles. To do this, I joined the job postings table with the skill table which provides the valuable insights we need.
 
 ```sql
 WITH top_10_jobs AS (
@@ -108,12 +109,12 @@ listings, however the top three skills are clearly dominant over the rest.
 
 This showcases a clear set of skills to focus on:
 - SQL for database knowledge and querying
-- Python for additional querying and statistical analyses
+- Python or R for additional querying and statistical analyses
 - Tableau for visualizng this data
 
 ![Top Paying Skills](project_sql/assets/Top_Paying_Skills.png)
 
-*Bar graph visualizing the count of skills for the top 10 paying jobs for Data Analysts. This was narrowed down to at least 3 job postings per skill for visual clarity.*
+*Bar graph visualizing the count of skills for the top 10 paying jobs for Data Analysts. This was narrowed down to at least three job postings per skill for visual clarity.*
 
 ### 3. In-Demand Skills for Data Analysts
 This query helped identify the top skills being asked for remote data analysts. This time, its across all job postings to get a better understanding of the industry as a whole.
@@ -143,16 +144,16 @@ LIMIT 5
 | Tableau   | 3,745         |
 | Power BI  | 2,609         |
 
-*Table showcasing the results of the top 5 skills query.*
+*Table showcasing the top 5 demanded skills.*
 <br>
 
 
 Looking at the results of this query, there is some pattern changes when considering all pay ranges.
 SQL, Excel, Python, and Tableau remain in the top 5. However, Power BI has replaced R as one of the top skills.
 Excel also has taken 2nd place, surpassing Python in this ranking. R is also now missing from the top 5.
-This showcases that while R is not as in demand, it can lead to a higher paying job. The key takeaway is that there is a need for a split set of skills:
-- SQL for database management
-- Excel for data analysis
+This showcases that while R is not as in demand, it can lead to a higher paying job. The key takeaway is that there is a need for a split set of skills which is reinforiced by the previous query:
+- SQL for database management.
+- Excel for data analysis and visualizations.
 - Python for statistical analyses.
 - Tableau or Power BI as a data visualization tool.
 
@@ -160,7 +161,7 @@ Based on the data, this list makes up the core of a data analyst. It will be imp
 for an analysts career.
 
 ### 4. Skills Based on Salary
-With this query, we are going to find out what is the average salary associated with each skill to see how it effects our list.
+With this query, we are going to find out what is the average salary associated with each skill to see how it affects our list.
 
 ```sql
 SELECT
