@@ -180,9 +180,8 @@ ORDER BY
     average_salary DESC
 LIMIT 10
 ```
-<br>
 
-#### Results:
+
 
 | Skills         | Average Salary |
 |----------------|----------------|
@@ -338,7 +337,7 @@ There are some notable highlights compared to the last scatter plot. Let's go ov
 
 Bringing it All Together
 -
-Based on this analysis, there is no truly optimal skill. As jobs seek higher demand, the average salary for them trends downward. This trends sharply as you get to the truly high demanded jobs. With this knowledge, an analyst will have to understand what they want to prioritize when learning something new. Do they want to target a skill that will get them a higher salary, or do they want one that will land them a job easier?
+Based on this analysis, there is no truly optimal skill. As jobs seek higher demanded skills, the average salary for them trends downward. This trends sharply as you get to the truly high demanded skills. With this knowledge, an analyst will have to understand what they want to prioritize when learning something new. Do they want to target a skill that will get them a higher salary, or do they want one that will land them a job easier?
 
 
 # Conclusion
